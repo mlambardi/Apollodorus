@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='504.00pt' height='504.00pt' viewBox='0 0 504.00 504.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1MDQuMDB8MC4wMHw1MDQuMDA='>
+    <rect x='0.00' y='0.00' width='504.00' height='504.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHw1MDQuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpNTAuNDB8NDUzLjYwfDAuMDB8NTA0LjAw'>
+    <rect x='50.40' y='0.00' width='403.20' height='504.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTAuNDB8NDUzLjYwfDAuMDB8NTA0LjAw)'>
+<rect x='50.40' y='0.00' width='403.20' height='504.00' style='stroke-width: 0.00; stroke: none;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHw1MDQuMDA=)'>
+</g>
+<g clip-path='url(#cpNTAuNDB8NDUzLjYwfDAuMDB8NTA0LjAw)'>
+<path d='M 206.18 380.29 L 242.84 416.95 L 297.82 398.62 L 261.16 361.96 L 206.18 380.29 Z' style='fill-rule: evenodd; fill: #FFFFFF; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+<path d='M 251.32 398.99 L 244.80 369.67 L 247.28 214.96 L 252.30 156.23 L 262.49 183.77 L 271.90 201.00 L 266.21 212.58 L 273.92 238.68 L 283.41 255.47 L 276.41 269.34 L 280.73 293.64 L 288.42 313.04 L 284.01 324.89 L 289.89 354.45 L 302.33 369.39 L 295.33 383.26 L 283.77 385.58 L 272.43 399.39 L 265.47 394.65 L 251.32 398.99 Z' style='fill-rule: evenodd; fill: #8F976C; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+<path d='M 216.06 382.79 L 227.11 384.26 L 232.57 397.27 L 243.95 392.36 L 251.32 398.99 L 260.24 381.65 L 253.92 366.27 L 251.56 338.30 L 260.49 320.96 L 256.32 303.15 L 251.81 277.61 L 260.73 260.27 L 255.87 242.64 L 252.05 216.92 L 260.98 199.58 L 256.37 184.20 L 252.30 156.23 L 245.36 182.81 L 236.06 201.67 L 243.63 211.44 L 238.01 236.35 L 226.61 253.74 L 236.54 267.22 L 229.34 293.23 L 219.69 314.37 L 227.35 323.58 L 216.06 354.16 L 206.13 369.30 L 216.06 382.79 Z' style='fill-rule: evenodd; fill: #6D7061; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHw1MDQuMDA=)'>
+</g>
+</g>
+</svg>

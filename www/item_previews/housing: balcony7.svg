@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='504.00pt' height='504.00pt' viewBox='0 0 504.00 504.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1MDQuMDB8MC4wMHw1MDQuMDA='>
+    <rect x='0.00' y='0.00' width='504.00' height='504.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHw1MDQuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpNTAuNDB8NDUzLjYwfDAuMDB8NTA0LjAw'>
+    <rect x='50.40' y='0.00' width='403.20' height='504.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTAuNDB8NDUzLjYwfDAuMDB8NTA0LjAw)'>
+<rect x='50.40' y='0.00' width='403.20' height='504.00' style='stroke-width: 0.00; stroke: none;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHw1MDQuMDA=)'>
+</g>
+<g clip-path='url(#cpNTAuNDB8NDUzLjYwfDAuMDB8NTA0LjAw)'>
+<path d='M 241.69 404.35 L 269.18 376.85 L 262.31 374.56 L 234.82 402.05 L 241.69 404.35 Z' style='fill-rule: evenodd; fill: #FFFFFF; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+<path d='M 241.69 376.85 L 269.18 349.36 L 262.31 347.07 L 234.82 374.56 L 241.69 376.85 Z' style='fill-rule: evenodd; fill: #988181; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+<path d='M 246.27 390.60 L 250.85 386.02 L 250.85 372.27 L 246.27 376.85 L 246.27 390.60 Z' style='fill-rule: evenodd; fill: #916F6F; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+<path d='M 246.27 363.11 L 250.85 358.53 L 250.85 344.78 L 246.27 349.36 L 246.27 363.11 Z' style='fill-rule: evenodd; fill: #916F6F; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+<path d='M 241.12 349.94 L 241.12 404.92 L 242.26 403.77 L 242.26 348.79 L 241.12 349.94 Z' style='fill-rule: evenodd; fill: #A88A8A; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+<path d='M 249.71 341.35 L 249.71 396.33 L 250.85 395.18 L 250.85 340.20 L 249.71 341.35 Z' style='fill-rule: evenodd; fill: #A88A8A; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+<path d='M 260.02 331.04 L 260.02 386.02 L 261.16 384.87 L 261.16 329.89 L 260.02 331.04 Z' style='fill-rule: evenodd; fill: #A88A8A; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+<path d='M 268.61 322.45 L 268.61 377.43 L 269.75 376.28 L 269.75 321.30 L 268.61 322.45 Z' style='fill-rule: evenodd; fill: #A88A8A; stroke-width: 0.00; stroke: #000000; stroke-opacity: 0.65; stroke-linecap: butt;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHw1MDQuMDA=)'>
+</g>
+</g>
+</svg>
