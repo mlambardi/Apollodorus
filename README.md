@@ -1,6 +1,10 @@
 # Apollodorus
 An `R` Shiny app to draw an ancient Greek town (_polis_) in low-poly, fake 3D graphics.
 
+Needs: `dplyr`, `sf`, `ggplot2`, `shiny`, `gfonts`
+
+You can try it out with the command: `shiny::runGitHub("apollodorus", "mlambardi")`
+
 ![Test Image 5](https://raw.githubusercontent.com/mlambardi/Apollodorus/refs/heads/main/www/saves/save.svg)
 
 ## Take-aways
