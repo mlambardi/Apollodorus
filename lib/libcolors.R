@@ -49,5 +49,6 @@ part_colors <- c(
   "grain light" = "#efdeba",
   "paintwhite light" = "#eeeeee",
   "paintwhite shadow" = "#cccccc",
-  "ground" = "#ffffff"
+  "ground" = "#ffffff",
+  "transparent" = "transparent"
 )

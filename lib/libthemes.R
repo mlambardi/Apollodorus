@@ -57,7 +57,3 @@ menu_find_path <- function(df, theme_item) {
     strsplit(split = "\\.") %>%
     unlist()
 }
-
-item_thumbnail <- function(theme_item, www = T) {
-  paste0(if (www) "www/", "item_previews/", theme_item, ".svg")
-}

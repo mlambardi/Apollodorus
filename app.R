@@ -54,7 +54,7 @@ ui <- page_fillable(
       popover(
         actionButton("modeadd", "", icon = icon("add")),
         uiOutput("buildingpicker"),
-        uiOutput("buildingpreview"),
+        plotOutput("buildingpreview"),
         placement = "bottom"
       ),
       actionButton("moderemove", "", icon = icon("trash"))
@@ -182,12 +182,15 @@ server <- function(input, output, session) {
     )
   })
 
-  output$buildingpreview <- renderUI({
+  output$buildingpreview <- renderPlot({
     req(state$picked)
-    img(
-      src = paste0("item_previews/", state$picked, ".svg"),
-      width = "100%"
-    )
+    item_models %>%
+      group_by(theme, sub("\\d+$", "", item)) %>%
+      filter(any(theme_item == state$picked)) %>%
+      mutate(part = ifelse(theme_item == state$picked, part, "transparent")) %>%
+      ggplot(aes(fill = part)) +
+      scale_fill_manual(values = part_colors) +
+      geom_sf(linewidth = 0)
   })
 
   observeEvent(input$modeadd, {
@@ -281,15 +284,12 @@ server <- function(input, output, session) {
       state$map %>%
         filter(part != "ground") %>%
         ggplot(aes(fill = part)) +
+        scale_fill_manual(values = part_colors) +
         geom_sf(data = hex_ground) +
         geom_sf(aes(linewidth = id %in% state$sel, alpha = !add), na.rm = T) +
         expand_limits(alpha = c(T, F), linewidth = c(T, F)) +
         scale_alpha(range = c(0.5, 1)) +
-        scale_linewidth(range = c(0, 1)) +
-        scale_fill_manual(
-          values = part_colors
-          # %>% color_bw()
-        ),
+        scale_linewidth(range = c(0, 1)),
       error = \(e) ggplot()
     )
   })
