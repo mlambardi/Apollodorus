@@ -1,6 +1,5 @@
 require(shiny)
 require(bslib)
-require(gfonts)
 
 require(dplyr)
 require(sf)
