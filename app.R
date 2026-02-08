@@ -52,6 +52,7 @@ ui <- page_fillable(
     style = css(grid_template_columns = "1fr 2fr"),
     card(
       actionButton("menugame", "", icon = icon("file"), width = "5em"),
+      actionButton("modeidle", "", icon = icon("cancel")),
       popover(
         actionButton("modeadd", "", icon = icon("add")),
         uiOutput("buildingpicker"),
@@ -194,6 +195,11 @@ server <- function(input, output, session) {
       geom_sf(linewidth = 0)
   })
 
+  observeEvent(input$modeidle, {
+    state$mode <- "idle"
+    state$sel <- integer(0)
+  })
+
   observeEvent(input$modeadd, {
     state$mode <- "add"
     state$sel <- integer(0)
@@ -295,12 +301,12 @@ server <- function(input, output, session) {
             sf::st_buffer(dist = 0.001) %>%
             sf::st_union(),
           fill = "transparent",
-          alpha = 0.2,
+          alpha = F,
           linewidth = T,
           na.rm = T
         ) +
         expand_limits(alpha = c(T, F), linewidth = c(T, F)) +
-        scale_alpha(range = c(0, 1)) +
+        scale_alpha(range = c(0.3, 1)) +
         scale_linewidth(range = c(0, 1)),
       error = \(e) ggplot()
     )
