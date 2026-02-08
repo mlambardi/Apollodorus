@@ -52,3 +52,22 @@ part_colors <- c(
   "ground" = "#ffffff",
   "transparent" = "transparent"
 )
+
+color_theme <- c(
+  "ground" = "#ffffff",
+  "assembly" = "#005380",
+  "defense" = "#800000",
+  "farming" = "#008047",
+  "forest" = "#438000",
+  "housing" = "#008080",
+  "market" = "#806d00",
+  "remembrance" = "#b87ab8",
+  "sea" = "#006d80",
+  "streets" = "#4d3333",
+  "temple" = "#649999",
+  "theater" = "#8e9964"
+) %>%
+  c(
+    setNames(., paste(names(.), "NA")),
+    setNames(scales::col_darker(., 5), paste(names(.), "shadow"))
+  )

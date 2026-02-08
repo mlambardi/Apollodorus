@@ -4,6 +4,7 @@ require(bslib)
 require(dplyr)
 require(sf)
 
+require(scales) # color manipulation
 require(ggplot2)
 
 theme_set(
@@ -227,13 +228,14 @@ server <- function(input, output, session) {
       remove = {
         state$sel <- item_models %>%
           merge(y = state$items, by = "theme_item") %>%
+          filter(part != "ground") %>%
           mutate(geometry = geometry + c(x[1], y[1]), .by = c(x, y)) %>%
           st_intersection(
             y = input$hover[c("x", "y")] %>%
               as.data.frame() %>%
               st_as_sf(coords = c("x", "y"))
           ) %>%
-          arrange(startsWith(part, "ground"), desc(y)) %>%
+          arrange(startsWith(part, "ground"), y) %>%
           pull(id) %>%
           head(1)
       },
@@ -283,12 +285,22 @@ server <- function(input, output, session) {
     state$mapplot <- tryCatch(
       state$map %>%
         filter(part != "ground") %>%
-        ggplot(aes(fill = part)) +
+        ggplot(aes(fill = part, alpha = !add)) +
         scale_fill_manual(values = part_colors) +
-        geom_sf(data = hex_ground) +
-        geom_sf(aes(linewidth = id %in% state$sel, alpha = !add), na.rm = T) +
+        geom_sf(data = hex_ground, linewidth = 0, alpha = T) +
+        geom_sf(linewidth = 0, na.rm = T) +
+        geom_sf(
+          data = state$map %>%
+            filter(id %in% state$sel, part != "ground") %>%
+            sf::st_buffer(dist = 0.001) %>%
+            sf::st_union(),
+          fill = "transparent",
+          alpha = 0.2,
+          linewidth = T,
+          na.rm = T
+        ) +
         expand_limits(alpha = c(T, F), linewidth = c(T, F)) +
-        scale_alpha(range = c(0.5, 1)) +
+        scale_alpha(range = c(0, 1)) +
         scale_linewidth(range = c(0, 1)),
       error = \(e) ggplot()
     )
