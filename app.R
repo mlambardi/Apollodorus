@@ -212,16 +212,8 @@ server <- function(input, output, session) {
   })
 
   observeEvent(input$brush, {
-    brush <- input$brush
+    state$zoom <- eval_zoom(input$brush)
     session$resetBrush("brush")
-    x <- unlist(brush[c("xmin", "xmax")])
-    y <- unlist(brush[c("ymin", "ymax")])
-    d <- max(diff(x), diff(y)) * 2
-    d <- max(d, 0.2)
-    state$zoom <- list(
-      x = mean(x) + c(-1, +1) * d / 2,
-      y = mean(y) + c(-1, +1) * d / 2
-    )
   })
 
   observeEvent(input$hover, {
@@ -232,22 +224,15 @@ server <- function(input, output, session) {
           as.data.frame()
       },
       remove = {
-        state$sel <- item_models %>%
-          merge(y = state$items, by = "theme_item") %>%
+        state$sel <- state$items %>%
+          make_sf(item_models) %>%
           filter(part != "ground") %>%
-          mutate(geometry = geometry + c(x[1], y[1]), .by = c(x, y)) %>%
-          st_intersection(
-            y = input$hover[c("x", "y")] %>%
-              as.data.frame() %>%
-              st_as_sf(coords = c("x", "y"))
-          ) %>%
+          clicked_sf(input$hover) %>%
           arrange(startsWith(part, "ground"), y) %>%
           pull(id) %>%
           head(1)
       },
-      idle = {
-        writeLines("nothing to do")
-      }
+      idle = {}
     )
   })
 
@@ -280,8 +265,7 @@ server <- function(input, output, session) {
   observe({
     tryCatch(
       state$map <- state$preview %>%
-        merge(x = item_models, by = "theme_item") %>%
-        mutate(geometry = geometry + c(x[1], y[1]), .by = c(x, y)) %>%
+        make_sf(item_models) %>%
         arrange(!startsWith(part, "ground"), layer, part_index),
       error = \(e) NULL
     )
@@ -297,9 +281,7 @@ server <- function(input, output, session) {
         geom_sf(linewidth = 0, na.rm = T) +
         geom_sf(
           data = state$map %>%
-            filter(id %in% state$sel, part != "ground") %>%
-            sf::st_buffer(dist = 0.001) %>%
-            sf::st_union(),
+            filter(id %in% state$sel, part != "ground"),
           fill = "transparent",
           alpha = F,
           linewidth = T,
